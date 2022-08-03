@@ -1,0 +1,237 @@
+/* google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;1,200;1,500&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Slabo+27px&display=swap');
+
+
+/* colors for the website  */
+:root {
+    --color-body: #FFFFFF;
+    --color-heading: #fcefee;
+    --color-base: #244d61;
+    --color-base2: #1d1d42;
+    --color-brand: #f7e6ca;
+    --color-brand2: #9ba5c9;
+    --color-text-brand: #fa4753;
+    --color-p-text: #6f88fc;
+    --color-p-text2: #fa8d70;
+    --color-ex: #f8c89a;
+    --sidbar-width: 240px;
+    --font-base: "Playfair Display";
+}
+
+/* style for the whole body  */
+body{
+    font-family: var(--font-base), sans-serif;
+    background-color: var(--color-base2);
+    color: var(--color-body);
+}
+
+/* heading tags  */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+/* anchor tags  */
+a{
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease ;
+}
+
+/* anchor tags hover  */
+a:hover{
+    color: var(--color-brand);
+}
+
+/* image tags style  */
+img{
+    width: 100%;
+}
+
+/* text-brand css  */
+.text-brand{
+    color: #ffba75;
+
+}
+
+
+/* to give blogs important keyword some color  */
+.blog-clr{
+    color: #fcc666;
+}
+
+/* paragraph css  */
+.lead{
+    color: var(--color-body);
+}
+
+/* helper class  */
+.full-height{
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.bg-base{
+    background-color: var(--color-base);
+}
+
+.shadow-effect{
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover{
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+.iconbox{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: var(--color-base2);
+    background-color: var(--color-brand);
+}
+
+/*responsive css for navbar  */
+
+.navbar{
+    background-color: var(--color-base);
+}
+
+.navbar .nav-link{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.navbar .nav-link:hover{
+    color: var(--color-brand);
+}
+
+.navbar .nav-link.active{
+    color: var(--color-ex);
+}
+
+@media (min-width:992px){
+    .navbar{
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: linear-gradient(rgba(51, 44, 79, 0.8), rgba(51, 44, 79, 0.8)), url(../images/sidebar-img.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .navbar-brand img{
+        border: 8px solid var(--color-brand2);
+    }
+
+    /* content-container css is here  */
+    #content-wrapper{
+        padding-left: var(--sidbar-width);
+    }
+    
+}
+
+
+/* css for button  */
+.btn{
+    padding: 12px 28px;
+    font-weight: 700;
+
+}
+
+.btn-brand{
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.btn-brand:hover,
+.btn-brand:focus{
+    background-color: var(--color-brand2);
+    color: var(--color-base2);
+    border-color: var(--color-brand2);
+}
+
+.link-custom{
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after{
+    width: 100%;
+}
+
+/* css for card in work  */
+.card-custom .card-custom-image{
+    overflow: hidden;
+
+}
+
+.card-custom .card-custom-image img{
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img{
+    transform: scale(1.1);
+}
+
+/* contact section css  */
+#contact .form-control{
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: var(--color-body);
+}
+
+#contact .form-control:focus{
+    border-color: var(--color-ex);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder{
+    color: var(--color-body);
+}
+
+#contact input.form-control{
+    height: 50px;
+}
+
+/* css for icons in footer  */
+
+.foo-ter{
+    font-size: 16px;
+}
+
+.social-icons{
+
+}
+
+.social-icons a{
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 100px;
+    font-size: 20px;
+}
