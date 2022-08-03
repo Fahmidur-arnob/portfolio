@@ -108,7 +108,7 @@ img{
 /*responsive css for navbar  */
 
 .navbar{
-    background-color: var(--color-base);
+    background-color: var(--color-back);
 }
 
 .navbar .nav-link{
